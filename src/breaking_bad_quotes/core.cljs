@@ -11,22 +11,21 @@
 (def click-count (r/atom 0))
 
 (defn quote []
-  (let [data (atom nil)]
-    (fetch-link! data)
-    (fn []
-      (let [{:strs [quote author]} (first @data)]
-        [:div.cards>div.card
-         [:h2.card-header.text-center "Breaking Bad Quotes"]
-         [:div.card-body.text-center
-          [:p#quote @click-count]
-          [:p#author author]]
-         [:div.card-footer.center.xt-center
-          [:button#twitter.outline>a#tweet
-           {:href "#"
-            :target "_blank"}
-           [:i.fi-social-twitter " Tweasdet"]]
-          [:button#new-quote.outline
-           [:i.fi-shuffle " New Quote"]]]]))))
+  [:div.root
+   [:h2 "Breaking Bad Quotes"]
+   [:div
+    [:p.quote @click-count]
+    [:p.author @click-count]
+   ]
+   [:div
+    [:button.button
+     [:i " Tweat"]
+     ]
+    [:button.button
+     [:i " New Quote"]
+     ]
+    ]
+  ])
 
 (defn add []
   (+ 1 1))
