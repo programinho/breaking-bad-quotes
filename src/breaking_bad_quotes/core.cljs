@@ -24,7 +24,6 @@
 
 
 (defn quote []
-<<<<<<< HEAD
   (let [data (atom nil)]
     (fetch-link! data)
     (fn []
@@ -41,24 +40,6 @@
           [:i.fi-social-twitter " Tweasdet"]]
           [:button#new-quote.outline
             [:i.fi-shuffle " New Quote"]]]]))))
-=======
-  [:div.root
-   [:h2 "Breaking Bad Quotes"]
-   [:div
-    [:p.quote @click-count]
-    [:p.author @click-count]
-   ]
-   [:div
-    [:button.button
-     [:i " Tweat"]
-     ]
-    [:button.button
-     [:i " New Quote"]
-     ]
-    ]
-  ])
->>>>>>> b1e73b2d09d40ab2b929a07d9c608880496781f8
-
 (defn add []
   (+ 1 1))
 
