@@ -20,9 +20,10 @@
         {:main
          {:entries [breaking-bad-quotes.core]}}
         ;; before live-reloading any code call this function
-
+        
         :devtools
-        {:before-load breaking-bad-quotes.core/stop
+        {
+         :before-load breaking-bad-quotes.core/stop
          ;; after live-reloading finishes call this function
          :after-load breaking-bad-quotes.core/start
          ;; serve the public directory over http at port 8700
